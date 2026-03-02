@@ -3,21 +3,242 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
   <title>Privacy Policy - NOME APP</title>
+  <meta name="description" content="Privacy Policy dell’app NOME APP." />
+  <style>
+    :root{
+      --bg: #0b0b0c;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.09);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.65);
+      --line: rgba(255,255,255,.12);
+      --accent: #4da3ff;
+      --shadow: 0 16px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7f9;
+        --panel:#ffffff;
+        --panel2:#f1f3f6;
+        --text: rgba(0,0,0,.88);
+        --muted: rgba(0,0,0,.60);
+        --line: rgba(0,0,0,.10);
+        --accent:#0a84ff;
+        --shadow: 0 16px 50px rgba(0,0,0,.10);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height:1.6;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(77,163,255,.18), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(255,77,140,.12), transparent 60%),
+        var(--bg);
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 16px 80px}
+    header{
+      position:sticky; top:0;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,0));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      z-index:10;
+    }
+    @media (prefers-color-scheme: light){
+      header{
+        background: linear-gradient(to bottom, rgba(255,255,255,.75), rgba(255,255,255,0));
+        border-bottom: 1px solid rgba(0,0,0,.06);
+      }
+    }
+    .topbar{
+      max-width:980px; margin:0 auto;
+      padding:14px 16px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:650;
+      letter-spacing:.2px;
+    }
+    .badge{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero{
+      margin-top:22px;
+      padding:22px 18px;
+    }
+    .hero h1{
+      margin:0 0 6px;
+      font-size:28px;
+      line-height:1.2;
+      letter-spacing:-.3px;
+    }
+    .meta{color:var(--muted); font-size:14px}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (min-width: 860px){
+      .grid{grid-template-columns: 320px 1fr;}
+    }
+    nav{
+      padding:16px;
+    }
+    nav .title{
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--muted);
+      margin-bottom:10px;
+    }
+    nav a{
+      display:block;
+      padding:10px 10px;
+      border-radius:12px;
+      color:var(--text);
+    }
+    nav a:hover{
+      background: var(--panel2);
+      text-decoration:none;
+    }
+    main{
+      padding:18px;
+    }
+    h2{
+      margin:22px 0 8px;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+    p{margin:0 0 12px; color:var(--text)}
+    .muted{color:var(--muted)}
+    .summary{
+      padding:14px 16px;
+      border-radius:14px;
+      background: linear-gradient(180deg, var(--panel2), transparent);
+      border: 1px solid var(--line);
+      margin-top:14px;
+    }
+    .summary strong{display:block; margin-bottom:6px}
+    .divider{height:1px; background:var(--line); margin:18px 0}
+    footer{
+      margin-top:22px;
+      padding:16px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+    .small{font-size:13px}
+    code.inline{
+      padding:2px 6px;
+      border-radius:8px;
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+    }
+  </style>
 </head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: 40px auto; padding: 0 16px;">
-  <h1>Privacy Policy – NOME APP</h1>
-  <p><em>Ultimo aggiornamento: 02/03/2026</em></p>
 
-  <p><strong>In sintesi:</strong> l’app <strong>NOME APP</strong> non raccoglie, non memorizza e non condivide dati personali dell’utente.</p>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">
+        <span class="badge">Privacy</span>
+        <span>NOME APP</span>
+      </div>
+      <span class="meta">Ultimo aggiornamento: 02/03/2026</span>
+    </div>
+  </header>
 
-  <h2>Contatti</h2>
-  <p>Email: <a href="mailto:TUAEMAIL@DOMINIO.IT">TUAEMAIL@DOMINIO.IT</a></p>
+  <div class="wrap">
+    <section class="card hero">
+      <h1>Privacy Policy</h1>
+      <div class="meta">Questa pagina descrive come <strong>NOME APP</strong> gestisce i dati dell’utente.</div>
 
-  <h2>Dati raccolti</h2>
-  <p>L’app non richiede registrazione e non raccoglie dati personali.</p>
+      <div class="summary">
+        <strong>In sintesi</strong>
+        <div class="muted">
+          <strong>NOME APP</strong> non raccoglie, non memorizza e non condivide dati personali dell’utente.
+          Se l’app usa permessi (es. foto/camera), vengono impiegati solo per la funzionalità richiesta e restano sul dispositivo.
+        </div>
+      </div>
+    </section>
 
-  <h2>Modifiche</h2>
-  <p>Eventuali aggiornamenti verranno pubblicati su questa pagina.</p>
+    <div class="grid">
+      <nav class="card">
+        <div class="title">Indice</div>
+        <a href="#titolare">Titolare e contatti</a>
+        <a href="#dati">Dati raccolti</a>
+        <a href="#permessi">Permessi del dispositivo</a>
+        <a href="#terze-parti">Terze parti</a>
+        <a href="#diritti">Diritti dell’utente</a>
+        <a href="#modifiche">Modifiche</a>
+      </nav>
+
+      <main class="card">
+        <h2 id="titolare">Titolare e contatti</h2>
+        <p>
+          Titolare: <strong>[Tuo Nome / Azienda]</strong><br/>
+          Email: <a href="mailto:TUAEMAIL@DOMINIO.IT">TUAEMAIL@DOMINIO.IT</a>
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 id="dati">Dati raccolti</h2>
+        <p>
+          <strong>NOME APP</strong> non richiede registrazione e non raccoglie dati personali. Non creiamo profili utente e non vendiamo informazioni.
+        </p>
+
+        <h2 id="permessi">Permessi del dispositivo</h2>
+        <p>
+          Se l’app richiede permessi (ad esempio Foto/Camera), vengono usati esclusivamente per offrire la funzionalità richiesta.
+          I contenuti restano sul dispositivo e non vengono inviati a server esterni.
+        </p>
+        <p class="small muted">
+          Suggerimento: puoi gestire i permessi da <span class="inline code">Impostazioni</span> → <span class="inline code">Privacy e sicurezza</span>.
+        </p>
+
+        <h2 id="terze-parti">Terze parti</h2>
+        <p>
+          Non condividiamo dati con terze parti perché non raccogliamo dati.
+        </p>
+
+        <h2 id="diritti">Diritti dell’utente</h2>
+        <p>
+          Per qualsiasi richiesta o chiarimento puoi contattarci via email. Poiché non trattiamo dati personali, non conserviamo informazioni da esportare o cancellare.
+        </p>
+
+        <h2 id="modifiche">Modifiche</h2>
+        <p>
+          Potremmo aggiornare questa informativa. La data di “Ultimo aggiornamento” indica l’ultima revisione.
+        </p>
+
+        <footer>
+          © 2026 [Tuo Nome / Azienda] — Privacy Policy per NOME APP
+        </footer>
+      </main>
+    </div>
+  </div>
 </body>
 </html>
